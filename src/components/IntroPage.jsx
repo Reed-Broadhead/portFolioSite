@@ -4,8 +4,11 @@ function IntroPage() {
 
     return (
         <>
-        <div>
-            <NavLink to="/homepage" >Homepage</NavLink>
+        <div className="bg-gray-700 h-screen flex justify-center">
+            <div className="mt-[180px]">
+                <NavLink  className="" to="/homepage" >Homepage</NavLink>
+            </div>
+            
         </div>
         </>
     )
