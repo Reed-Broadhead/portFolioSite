@@ -1,6 +1,6 @@
 import PageStructure from "./PageStructure"
 import github from "../assets/github-mark-white.png"
-import projects from "./projectData"
+import projects from "./allProjects/projectData"
 
 function Projects () {
     const ProjectContent = projects.map((project) => (
