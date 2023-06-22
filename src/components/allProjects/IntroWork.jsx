@@ -60,7 +60,7 @@ function IntroWork() {
         </motion.div> 
         {/* second */}
          <motion.div className=" w-full h-1/3 
-         flex items-center justify-center
+         flex items-center justify-center border
         bg-lightgreen"
         
         initial={{x: 1000}}
@@ -88,7 +88,7 @@ function IntroWork() {
         </motion.div>
 
         {/* third */}
-        <motion.div className=" w-full h-1/3 
+        <motion.div className=" w-full h-1/3  border
         bg-lightgreen"
         
         initial={{x: -1000}}
