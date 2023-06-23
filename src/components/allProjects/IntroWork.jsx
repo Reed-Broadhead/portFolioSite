@@ -7,21 +7,25 @@ function IntroWork() {
   console.log(projects)
   // const firstThree =
 
-  const mappedProjects =  projects.map(project => {
+  const mappedProjects =  Object.values(projects).map(project => {
     return (
       <Tilt tiltReverse={true} >
-          <motion.div className="border border-brown w-[120px] h-[120px] bg-green
-          flex flex-col items-center mx-3"
+          <motion.div className="border border-brown w-[250px] h-[300px] bg-green
+          flex flex-col items-center mx-3 rounded-xl shadow-xl"
           initial={{opacity: 0}}
-          animate={{ opacity: 1 }}
+          animate={{ opacity: 1}}
           transition={{
-            delay: 3,
-            duration: 1
+            delay: project.order,
+            duration: 2, 
+            
           }}
           
           >
-            <h1 className="mt-5 text-white">{project.name}</h1>
-            <motion.button className="bg-white w-12 h-5 mt-5 rounded-md"
+            <h1 className="mt-20 text-white text-xl">{project.name}</h1>
+
+            
+            <motion.button className="bg-white w-20 h-10 rounded-full mt-20 
+            border-2 shadow-lg border-brown"
             whileHover={{scale: [null, 1.1]}}
             transition={{ duration:0.3}}
             
@@ -31,82 +35,30 @@ function IntroWork() {
     )
   })
 
+  console.log(mappedProjects)
+
     return(
 
         <div 
-        className=" w-full h-[400px] mt-[60px] flex flex-col
-        bg-gradient-to-r from-lightgreen to-green
-        "
-        >
-        {/* first */}
-        <motion.div className=" w-full h-1/3 mt-1 
-        flex items-center justify-center text-lg
-        bg-lightgreen"
-        
-        initial={{x: -1000}}
-        animate={{x: 0}}
-        transition={{duration: 2, type: "tween"  }}
-        >
-          <motion.h1 className="text-white"
-         initial={{ opacity: 0 }}
-         animate={{ opacity: 1 }}
-         transition={{
-         delay: 2,
-         duration: 0.7
-        }}
+        className=" w-full h-screen mt-[60px] flex flex-col border
+        bg-lightgreen items-center">
 
-          
-          >Checkout My Projects</motion.h1>
-        </motion.div> 
-        {/* second */}
-         <motion.div className=" w-full h-1/3 
-         flex items-center justify-center border
-        bg-lightgreen"
-        
-        initial={{x: 1000}}
-        animate={{x: 0}}
-        transition={{duration: 2, type: "tween"  }}
-        >
-        {mappedProjects}
-
-        {/* <Tilt tiltReverse={true} >
-          <motion.div className="border border-blue-950  w-[120px] h-[120px] bg-red-300
-          flex flex-col items-center"
-          initial={{opacity: 0}}
-          animate={{ opacity: 1 }}
-          transition={{
-            delay: 3,
-            duration: 1
-          }}
-          
+          <motion.div className=" h-1/4 flex items-center text-3xl text-white "
+            initial={{opacity: 0}}
+            animate={{ opacity: 1 }}
+            transition={{
+              delay: 2,
+              duration: 1
+            }}
           >
-            <h1 className="mt-5">Weather App</h1>
-            <button className="bg-green-900 w-12 h-5 mt-5 rounded-md"></button>
+            <h1 className=""> Chech out my work</h1>
           </motion.div>
-        </Tilt> */}
 
-        </motion.div>
+          <div className="flex flex-row justify-center w-full  ">
+            {mappedProjects}
+          </div>
+        
 
-        {/* third */}
-        <motion.div className=" w-full h-1/3  border
-        bg-lightgreen"
-        
-        initial={{x: -1000}}
-        animate={{x: 0}}
-        transition={{duration: 2, type: "tween"  }}
-        >
-            
-        </motion.div>
-        {/* fourth */}
-        {/* <motion.div className=" w-screen h-1/4  
-        bg-gradient-to-r from-cyan-500 to-blue-500"
-        
-        initial={{x: 1000}}
-        animate={{x: 0}}
-        transition={{duration: 2, type: "tween"  }}
-        >
-            
-        </motion.div> */}
 
         </div>
         

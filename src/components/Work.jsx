@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import  WeatherApp  from "./allProjects/WeatherApp"
 import IntroWork from "./allProjects/IntroWork"
 import Store from "./allProjects/Store"
+import Cove from "./allProjects/Cove"
 
 function Work() {
 
@@ -13,7 +14,8 @@ function Work() {
         <IntroWork />
         <WeatherApp />
         <Store />
-
+        <Cove />
+        
         </div>
 
 
