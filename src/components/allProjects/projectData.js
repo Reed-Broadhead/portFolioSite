@@ -35,6 +35,7 @@ const projects = {
     description: "stuff", 
     github: "https://github.com/DirtyKeyboard/phase-3-project", 
     picture: "stuff",
+    icons: [python, SqlAlchemy],
     order: 4.5
 },
 }

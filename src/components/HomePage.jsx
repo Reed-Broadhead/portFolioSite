@@ -1,10 +1,12 @@
 import PageStructure from "./PageStructure"
 import NavBar from "./NavBar"
-function HomePage() {
+import { Canvas } from '@react-three/fiber'
 
+function HomePage() {
     return(
         <>
         <NavBar name={'HomePage'}/>
+
         </>
     )
 }

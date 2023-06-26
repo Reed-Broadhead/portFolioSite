@@ -45,16 +45,17 @@ function TextStructure( {data} ) {
             <div className="flex flex-col-3 justify-center  w-full h-9">
                 <div>
                 <motion.img src={play} className="h-full rounded-full bg-white"
-                whileHover={{
-                rotate: [0, 180, 90, 270, 0],
+                // whileHover={{
+                // rotate: [0, 180, 90, 270, 0],
                 
-                transition:{ 
-                    duration: 3,
-                    repeat: Infinity,  
-                    repeatDelay: 0.8  
-                }
-                }}
-
+                // transition:{ 
+                //     duration: 3,
+                //     repeat: Infinity,  
+                //     repeatDelay: 0.8  
+                // }
+                // }}
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
 
                 ></motion.img>
                 </div>
@@ -63,9 +64,12 @@ function TextStructure( {data} ) {
                     {Icons}           
                 </div>
 
-                <div>
-                    <img src={github} className="h-full"></img>
-                </div>
+                <motion.div className=""
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                    <a href={data.github}><img src={github} className="h-full"></img></a>
+                </motion.div>
 
             </div>
             

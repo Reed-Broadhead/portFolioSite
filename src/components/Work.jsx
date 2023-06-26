@@ -4,6 +4,7 @@ import  WeatherApp  from "./allProjects/WeatherApp"
 import IntroWork from "./allProjects/IntroWork"
 import Store from "./allProjects/Store"
 import Cove from "./allProjects/Cove"
+import FinanceTracker from "./allProjects/FinanceTracker"
 
 function Work() {
 
@@ -15,6 +16,8 @@ function Work() {
         <WeatherApp />
         <Store />
         <Cove />
+        <FinanceTracker />
+
         
         </div>
 
