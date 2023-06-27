@@ -10,15 +10,15 @@ function Store() {
         <div className="flex justify-center h-[600px] bg-lightgreen">  
         <div className="flex w-2/3 ">
 
-            <div className="w-1/2">
-                
+            <div className="w-1/2 flex items-center ">
+                <div className="h-2/3">
                  <Canvas>
                     <Stage environment="city" intensity={0.6}>
                         <Cash />
                     </Stage>
-                    <OrbitControls  enableZoom={false} />
+                    <OrbitControls   enableZoom={false} />
                  </Canvas>
-                 
+                 </div> 
             </div>
 
              <div className=" w-1/2 ">
