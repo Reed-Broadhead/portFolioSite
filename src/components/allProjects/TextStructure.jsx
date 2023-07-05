@@ -15,7 +15,7 @@ function TextStructure( {data} ) {
     })
     return (
 
-        <motion.div className="flex  justify-center flex-col  w-full h-full r"
+        <motion.div className="flex  justify-center flex-col  w-full h-full "
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{
@@ -24,7 +24,7 @@ function TextStructure( {data} ) {
         }}
         >
 
-        <div className="h-3/4 flex flex-col items-center">
+        <div className="h-3/4 flex flex-col items-center border border-brown bg-green shadow-lg rounded-md">
 
             <motion.div className="flex h-1/4  justify-center items-end "
            
