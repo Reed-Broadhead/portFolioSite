@@ -8,6 +8,7 @@ import HomePage from './components/HomePage'
 import Projects from './components/Projects'
 import {Route, Routes} from 'react-router-dom'
 
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -17,6 +18,7 @@ function App() {
       <Route path="/homepage" element={<HomePage />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/work" element={<Work />} />
+  
     </Routes>
   )
 }

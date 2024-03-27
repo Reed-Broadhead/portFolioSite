@@ -24,7 +24,7 @@ function TextStructure( {data} ) {
         }}
         >
 
-        <div className="h-3/4 flex flex-col items-center border border-brown bg-green shadow-lg rounded-md">
+        <div className="h-3/4 flex flex-col items-center border border-brown bg-green shadow-lg rounded-lg">
 
             <motion.div className="flex h-1/4  justify-center items-end "
            
@@ -36,7 +36,7 @@ function TextStructure( {data} ) {
                 
             </motion.div>
 
-            <div className="flex  justify-center  h-auto text-gray text-xl 
+            <div className="flex  justify-center  h-auto text-lightgray text-xl 
              mt-2 w-2/3 ">
                 <h1 className="  text-center ">{data.description}</h1>
                 

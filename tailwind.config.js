@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
 export default {
   content: [
     "./index.html",
@@ -13,9 +14,17 @@ export default {
       lightgreen: '#143A2A',
       white: '#F0F0F0',
       brown: '#C9C3A2',
-      
-      gray: '#D4D4D8',
-      lightgray: "#E4E4E7"
+      // gray: '#20211E',
+      lightgray: '#D4D4D8',
+      darkgray: '#D4AC12',
+      white: colors.white,
+      gray: colors.trueGray,
+      indigo: colors.indigo,
+      red: colors.red,
+      blue:colors.blue,
+      yellow:colors.amber,
+      purple:colors.purple,
+      green:colors.green,
     },
     extend: {},
   },

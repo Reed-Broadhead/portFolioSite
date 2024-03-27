@@ -1,53 +1,50 @@
+import { useState } from "react"
 import { NavLink } from "react-router-dom"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
+import background from '../assets/background.png'
 
-function NavBar({name}) {
-    const activeLink = " ml-5 text-lg text-white pl-1 pr-1 "
-    const notActive = "ml-5 pl-1 pr-1 text-lg text-gray hover:text-white"
+function NavBar({about, projectRef}) {
+    const [hasMoved, setHasMoved] = useState(false)
+
+    window.addEventListener('scroll', () => { 
+        if(window.scrollY > 0){
+            setHasMoved(true)
+        }})
+
+    const handleScroll = (x) => {
+        x.current?.scrollIntoView({behavior: 'smooth'})
+    }
+
+
     return (
-        
-        <motion.div className="fixed top-0 w-screen z-10"
-        
-        // initial={{ opacity: 0.8 }}
-        // animate={{ opacity: 1 }}
-        // transition={{duration: 0.8}}
-        
-        >
-        <div className="flex h-16 items-center text-slate-700 bg-[#000000] ">
+        <>
+           {/* { hasMoved ? 
+           <motion.div
+            className="h-[165px] justify-between w-full fixed bg-black/50"
+            initial={{ opacity: 0}}
+            animate={{ opacity: 1}}
+            transition={{ duration: 0.5 }}  
+            /> : null} */}
 
-            <div className="w-1/6 ">
-            <NavLink className={ ({isActive, isPending }) => (isActive ? activeLink : notActive) }
-            to="/homepage">Homepage</NavLink>
+            <div 
+            // style={{backgroundColor: hasMoved ? 'rgba(0,0,0,0.5)' : null }}
+            className="flex flex-row h-1/4 justify-between w-full ">
 
-            {/* <NavLink className={ ({isActive, isPending }) => (isActive ? activeLink : notActive) }
-            to="/projects">projects</NavLink> */}
+                {/* Name */}
+                <div className="  mt-6 ml-5  h-min">
+                    <h1 className="text-5xl text-white">REED</h1>
+                    <h1 className="text-5xl text-white">BROADHEAD</h1>
+                </div>  
 
+                {/* Text in center */}
+                <div className=" w-[287px] mr-5 flex flex-col mt-2 items-center  ">
+                    <button onClick={() => handleScroll(projectRef)} className="text-5xl text-white w-fit text-black">Work</button>
+                    <button onClick={() => handleScroll(projectRef)} className="text-5xl text-white ml-20  w-fit text-black">Contact</button>
+                    <button onClick={() =>  handleScroll(about) } className="text-5xl text-white  w-fit ml-4 text-black">About</button>
 
-            <NavLink className={ ({isActive, isPending }) => (isActive ? activeLink : notActive) }
-            to="/work">Work</NavLink>          
-
+                </div>
             </div>
-
-            <div className="bg-black h-16 flex text-center justify-center pt-4 w-4/6 mb-3">
-            <motion.div className=" flex items-center justify-center border-y-2 border-brown w-screen text-white h-12 "
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{
-                    delay: 0.5,
-                    duration: 2
-                }}
-            > 
-                <h1 className="text-[25px]">{name}</h1>
-            </motion.div>
-        </div>
-
-            <div className="w-1/6 flex flex-row-reverse ">
-                <h1 className="mr-5 text-lg text-white">hello</h1>
-            </div>
-
-        </div>
-
-        </motion.div>
+        </>
     )
 }
 

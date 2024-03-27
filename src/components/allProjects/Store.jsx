@@ -7,7 +7,7 @@ import Cash from "./ThreeDModles/Cash"
 function Store() {
 
     return (
-        <div className="flex justify-center h-[600px] bg-black">  
+        <div className="flex justify-center h-[600px] bg-darkgray">  
         <div className="flex w-2/3 ">
 
             <div className="w-1/2 flex items-center justify-center ">
@@ -16,7 +16,7 @@ function Store() {
                     <Stage environment="city" intensity={0.5}>
                         <Cash />
                     </Stage>
-                    <OrbitControls   enableZoom={false} />
+                    <OrbitControls  autoRotate={true} enableZoom={false} />
                  </Canvas>
                  </div> 
             </div>
