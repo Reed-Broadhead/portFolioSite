@@ -8,12 +8,7 @@ const container = (x: any) => {
 	return (
 	<div className="w-full rounded-md bg-white/40">
 		{x}
-	</div>
-)
-
-
-}
-
+	</div>) }
 return (
 	<div className=" bg-black justify-center border border-white/0" 
 	style={{
