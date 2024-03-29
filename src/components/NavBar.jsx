@@ -1,51 +1,44 @@
-import { useState } from "react"
-import { NavLink } from "react-router-dom"
-import { motion, AnimatePresence } from "framer-motion"
-import background from '../assets/background.png'
+import { useState, useEffect, useRef } from "react"
 
-function NavBar({about, projectRef}) {
+function NavBar({about, projectRef, contactRef}) {
     const [hasMoved, setHasMoved] = useState(false)
 
-    window.addEventListener('scroll', () => { 
+	window.addEventListener('scroll', () => { 
         if(window.scrollY > 0){
             setHasMoved(true)
         }})
 
-    const handleScroll = (x) => {
+    const handleScroll= (x) => {
         x.current?.scrollIntoView({behavior: 'smooth'})
     }
-
-
+    useEffect(() => {
+        if (window.innerWidth < 768) {
+        } 
+    }, [])
+    
     return (
         <>
-           {/* { hasMoved ? 
-           <motion.div
-            className="h-[165px] justify-between w-full fixed bg-black/50"
-            initial={{ opacity: 0}}
-            animate={{ opacity: 1}}
-            transition={{ duration: 0.5 }}  
-            /> : null} */}
-
             <div 
             // style={{backgroundColor: hasMoved ? 'rgba(0,0,0,0.5)' : null }}
-            className="flex flex-row h-1/4 justify-between w-full ">
-
+            className=" h-1/4 w-full ">
+		<div className="h-min flex bg-black/70 lg:bg-black/0 flex-row items-center ">
                 {/* Name */}
-                <div className="  mt-6 ml-5  h-min">
-                    <h1 className="text-5xl text-white">REED</h1>
-                    <h1 className="text-5xl text-white">BROADHEAD</h1>
+                <div className=" flex flex-col w-full h-min pl-5 pt-1 pb-2 justify-center ">
+                    <h1 className="text-2xl text-white lg:text-5xl"> REED</h1>
+                    <h1 className="text-2xl text-white lg:text-5xl"> BROADHEAD</h1>
                 </div>  
-
+                
                 {/* Text in center */}
-                <div className=" w-[287px] mr-5 flex flex-col mt-2 items-center  ">
-                    <button onClick={() => handleScroll(projectRef)} className="text-5xl text-white w-fit text-black">Work</button>
-                    <button onClick={() => handleScroll(projectRef)} className="text-5xl text-white ml-20  w-fit text-black">Contact</button>
-                    <button onClick={() =>  handleScroll(about) } className="text-5xl text-white  w-fit ml-4 text-black">About</button>
-
+                 <div className="h-min flex flex-col pr-4 pt-1 ">
+                    <button onClick={() =>  handleScroll(about) } className=" text-2xl text-white  w-fit lg:text-5xl mr-3 ">About</button>
+                    <button onClick={() => handleScroll(projectRef)} className="text-2xl text-white w-fit  lg:text-5xl ml-3 "> Work</button>
+                    <button onClick={() =>  handleScroll(contactRef) } className="text-2xl text-white  w-fit lg:text-5xl "> Contact </button>
                 </div>
+                
+               </div> 
             </div>
         </>
     )
-}
-
+} 
 export default NavBar
+

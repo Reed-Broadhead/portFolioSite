@@ -3,9 +3,11 @@ import NavBar from "./NavBar"
 import background from '../assets/background.png'
 import background2 from '../assets/Rectangle.png'
 import About from "./pageSections/About"
+import ContactMe from "./pageSections/ContactMe"
 import Projects from "./pageSections/Projects"
 import { motion } from "framer-motion"
 import { useScroll, useMotionValueEvent } from "framer-motion"
+
 import { useRef } from "react"
 // import { Canvas } from '@react-three/fiber'
 
@@ -15,6 +17,7 @@ function HomePage() {
 
     const about = useRef();
     const projects = useRef();
+    const contact = useRef();
     return(
         <>
         {/* <NavBar name={'HomePage'}/> */}
@@ -28,10 +31,10 @@ function HomePage() {
                 backgroundPosition: 'center'}}
                 className="h-screen w-full flex flex-col ">
                 
-                    <NavBar about={about} projectRef={projects}/>
+                    <NavBar about={about} projectRef={projects} contactRef={contact} />
 
 
-                <div className="flex flex-col  items-center justify-center text-4xl ml-10 h-2/4 "> Software Developer</div>
+                <div className="flex flex-col  items-center justify-center text-4xl h-2/4 ">Software Developer</div>
                 
             </div>
 
@@ -42,14 +45,17 @@ function HomePage() {
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center'}}
-            className="h-screen w-full flex flex-row justify-between">      
+            className=" w-full flex flex-row justify-between">      
 
                 <About/>
 
             </div>
 
+
             <Projects projectRef={projects}/>
-        </>
+	    <ContactMe contactRef={contact}/>
+	 
+	    </>
     )
 }
 

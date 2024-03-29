@@ -6,7 +6,7 @@ import github from "../../assets/github-mark-white.png"
 import linkIn from "../../assets/linkedin.png"
 import medium from "../../assets/medium.png"
 
-import { arrayBuffer } from "stream/consumers"
+// import { arrayBuffer } from "stream/consumers" 
 
 let socials: {name: string, link: string, image: string, color: string}[] = [
     {
@@ -37,44 +37,43 @@ export default function About() {
 
     return (
         <>
-        <div className="flex flex-col mb-10">
+        
+        <div className="grid lg:grid-cols-2 mb-10 max-w-[1280px] h-min mx-auto ">
             {/* top section */}
-            <div className=" w-full h-[70%] flex-row flex"> 
+            
+                <h1 className="text-5xl text-white h-min underline text-black mt-5 mb-5 text-center lg:ml-5 lg:text-start  lg:col-span-2 w-full">About Me</h1>
 
                 {/* Top Left */}
-                <div className=" w-1/2 h-full flex-col"> 
-
-                    {/* section name */}
-                    <h1 className="text-5xl text-white underline text-black mt-5 ml-10">About Me</h1>
+                <div className="  h-min flex-col text-center px-10 "> 
 
                     {/* text */}
-                    <p className="ml-20 w-[70%] mt-8 text-lg">Hello. I am Reed Broadhead, a dedicated and driven 
+                    <p className=" w-full mt-2 text-md md:text-xl lg:text-2xl">Hello. I am Reed Broadhead, a dedicated and driven 
                     software developer from the DFW area and a recent Flatiron graduate. I am currently searching for a full-stack dev job,
                     and expanding my knowledge to allow myself to widen the pool of jobs I am qualified for.</p>
 
-                    <p className="ml-20 w-[70%] mt-2 text-lg">Hello. I am Reed Broadhead, a dedicated and driven 
+                    <p className=" w-full mt-2 text-md md:text-xl lg:text-2xl">Hello. I am Reed Broadhead, a dedicated and driven 
                     software developer from the DFW area and a recent Flatiron graduate. I am currently searching for a full-stack dev job,
                     and expanding my knowledge to allow myself to widen the pool of jobs I am qualified for.</p>
 
-                    <p className="ml-20 w-[70%] mt-2 text-lg">Hello. I am Reed Broadhead, a dedicated and driven 
+                    <p className=" w-full mt-2 text-md md:text-xl lg:text-2xl">Hello. I am Reed Broadhead, a dedicated and driven 
                     software developer from the DFW area and a recent Flatiron graduate. I am currently searching for a full-stack dev job,
                     and expanding my knowledge to allow myself to widen the pool of jobs I am qualified for.</p>
 
                 </div>
 
                 {/* Top Right */}
-                <div className="w-1/2 h-full  flex items-center justify-center">
+                <div className="w-full   flex items-center justify-center  ">
                     <img className="object-cover w-2/3 h-3/4" src={filler}></img>
                 </div>
 
-            </div>
+  
                 
             {/* bottom section */}
-            <div className=" w-full h-[30%] flex flex-row justify-around items-center px-[15%]">
+            <div className=" flex flex-row justify-around items-center px-[15%] lg:col-span-2 mt-10 ">
                 {socials.map((element) => {
                         return (
                             <motion.div
-                            className="h-[150px] w-[250px] rounded-md flex flex-col items-center justify-end  text-white"                 
+                            className=" pt-2 w-1/4 rounded-md flex flex-col items-center   text-white"                 
                             onClick={() => openInNewTab(element.link)}
                             key={element.name}
                             whileHover={{scale: 1.02}}
@@ -89,7 +88,7 @@ export default function About() {
                             
                             >
                                 <img className="w-1/3"src={element.image}></img>
-                                <h1 className="my-1 text-2xl">{element.name}</h1>
+                                <h1 className="text-md lg:text-xl py-1">{element.name}</h1>
                             </motion.div>                
                         )
                     })

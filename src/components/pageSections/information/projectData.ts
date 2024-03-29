@@ -10,13 +10,13 @@ import Rust from "./ProjectTechImages/Rust.webp"
 import Python from "./ProjectTechImages/Python.webp"
 import Express from "./ProjectTechImages/Express.webp"
 
-interface Project { 
+export interface Project { 
     title: string,
     description: string,
     image: string,
     link: string,
     techStack: any[],
-    style?: string
+    style?: boolean
 }
 
 
@@ -29,7 +29,7 @@ export const projects: Project[] = [
         link: "https://www.google.com",
         // techStack: ["React", "Ruby on Rails", "PostgreSQL", "hi", "yo"],
         techStack: [TypeScript, React, Tailwind, Node, Express ],
-        style: "span 2 / span 2"
+        style: true
     },
     {
         title: "VC-Connects",
