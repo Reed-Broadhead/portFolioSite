@@ -36,6 +36,7 @@ export default function Projects({projectRef}) {
 
             <div ref={projectRef} 
             className=" w-full m-auto grid h-full  lg:grid-cols-2 gap-6 justify-around max-w-[1280px] mb-5 ">  
+	    	<h1 className="text-white text-5xl underline mt-4 px-2 lg:text-5xl lg:mx-5 ">Projects</h1>
                 {
                     projects.map((project: Project, index) => {
                         // console.log(project.techStack)

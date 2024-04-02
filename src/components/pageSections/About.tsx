@@ -41,7 +41,7 @@ export default function About() {
         <div className="grid lg:grid-cols-2 mb-10 max-w-[1280px] h-min mx-auto ">
             {/* top section */}
             
-                <h1 className="text-5xl text-white h-min underline text-black mt-5 mb-5 text-center lg:ml-5 lg:text-start  lg:col-span-2 w-full">About Me</h1>
+                <h1 className="text-5xl text-white h-min underline text-black mt-5 mb-5 text-center lg:ml-5 lg:text-start  lg:col-span-2 w-full ">About Me</h1>
 
                 {/* Top Left */}
                 <div className="  h-min flex-col text-center px-10 "> 
