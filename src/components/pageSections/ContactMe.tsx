@@ -1,3 +1,4 @@
+import React from "react"
 import {useState, useRef} from "react"
 import background from "../../assets/Rectangle.png"
 import { motion } from "framer-motion"
@@ -20,7 +21,7 @@ export default function ContactMe({contactRef}) {
       		);
 	}
 
-	const container = (x: any) => {
+	const container = (x: any)  =>{
 
 	return (
 	<div className="w-full h-fit rounded-md bg-white/40 max-w-[400px] "  >
@@ -41,7 +42,7 @@ export default function ContactMe({contactRef}) {
 					<h1  className=" text-5xl underline text-white h-min mx-auto border-white mx-auto mt-4 px-2 lg:text-5xl lg:mx-5"> Email Me </h1>
 				</div>
 
-				<form ref={email} onSubmit={(e) => submitEmail(e)} className=" grid gap-6  justify-center mt-6 mx-auto rounded-md lg:grid-cols-2 w-full max-w-[900px] bg-[#0057ff]/[20%] p-4 border border-black  ">
+				<form ref={email} onSubmit={(e) => sendEmail(e)} className=" grid gap-6  justify-center mt-6 mx-auto rounded-md lg:grid-cols-2 w-full max-w-[900px] bg-[#0057ff]/[20%] p-4 border border-black  ">
 					<div className=" flex flex-col pl-2 h-[120px] justify-between ">
 					{ ["Name PLZ", "Email Address"].map((x: string) => {	
 						return (
