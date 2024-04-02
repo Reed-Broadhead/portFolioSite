@@ -34,7 +34,7 @@ function HomePage() {
                     <NavBar about={about} projectRef={projects} contactRef={contact} />
 
 
-                <div className="flex flex-col  items-center justify-center text-4xl h-2/4 ">Software Developer</div>
+                <div className="flex flex-col  items-center justify-center text-4xl h-2/4 font-body ">Software Developer</div>
                 
             </div>
 

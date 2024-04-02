@@ -26,6 +26,11 @@ export default {
       purple:colors.purple,
       green:colors.green,
     },
+	fontFamily: { 
+		body: ['Felix' ],
+		title: ['Cinzel']
+	},
+
     extend: {},
   },
   plugins: [],

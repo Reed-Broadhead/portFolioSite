@@ -32,12 +32,14 @@ export default function Projects({projectRef}) {
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center'}}
-        className='min-h-screen border border-white/0 '>
+        className=' pb-4 '>
 
             <div ref={projectRef} 
             className=" w-full m-auto grid h-full  lg:grid-cols-2 gap-6 justify-around max-w-[1280px] mb-5 ">  
-	    	<h1 className="text-white text-5xl underline mt-4 px-2 lg:text-5xl lg:mx-5 ">Projects</h1>
-                {
+	    	<div className="w-full flex justify-center lg:justify-start ">
+	    	<h1 className="text-black text-5xl font-title border-b-2 border-black w-min mt-4 px-2 lg:text-5xl lg:mx-5 ">Projects</h1>
+                </div>
+		{
                     projects.map((project: Project, index) => {
                         // console.log(project.techStack)
                         return(
@@ -55,7 +57,7 @@ export default function Projects({projectRef}) {
                                     backgroundRepeat: 'no-repeat',
                                     backgroundPosition: 'top'}}>
                                     {/* darkness image */}
-                                    <div className="w-full h-full flex flex-col  bg-black/25 rounded-lg">
+                                    <div className="w-full h-full flex flex-col  bg-black/80 rounded-lg">
 
                                         {/* the div that animates */}
                                         <AnimatePresence mode="wait">
@@ -72,9 +74,9 @@ export default function Projects({projectRef}) {
                                                 // first part
                                                 <>
                                                     <div className='flex w-full h-[30%] max-w-[500px]  justify-center '>
-                                                        <h1 className="text-white text-4xl border-b w-3/4  h-min  text-center pb-2 mt-auto">{project.title}</h1>                                                
+                                                        <h1 className="text-white text-4xl font-title border-b border-gray-300 w-3/4  h-min  text-center mt-auto">{project.title}</h1>                                                
                                                     </div>
-                                                    <p className=" w-4/6 mt-2 text-white text-xl text-center">{project.description}</p>
+                                                    <p className=" w-4/6 mt-2 text-white text-xl text-center font-body">{project.description}</p>
                                                 </>
                                                 : 
                                                 // second part
@@ -87,7 +89,7 @@ export default function Projects({projectRef}) {
                                                             </a>
                                                         </div>
 
-                                                        <h1 className='text-white text-4xl border-b pb-2 w-4/6 mt-auto text-center  '>Tech Stack</h1>
+                                                        <h1 className='text-white text-4xl border-b w-4/6 mt-auto text-center font-title '>Tech Stack</h1>
                                                     </div>
 
                                                     <div className='grid grid-cols-3 w-1/2 gap-4 max-w-[240px] '>
