@@ -6,11 +6,14 @@ import Node from "./ProjectTechImages/Node.webp"
 import React from "./ProjectTechImages/React.webp"
 import TypeScript from "./ProjectTechImages/TypeScript.webp"
 import Tailwind from "./ProjectTechImages/tailwind.svg"
-import Rust from "./ProjectTechImages/Rust.webp"
+import Rust from "./ProjectTechImages/Rust.png"
 import Python from "./ProjectTechImages/Python.webp"
-import Express from "./ProjectTechImages/Express.webp"
+import Express from "./ProjectTechImages/Express.png"
 import Dibs from "./backGroundImgs/FirstComeFirstDibs.png"
 import TicTacToe from "./backGroundImgs/TicTacToe.png"
+import VC_Connects from "./backGroundImgs/VC-Connects.png"
+import cove from "./backGroundImgs/Cove.png"
+
 export interface Project { 
     title: string,
     description: string,
@@ -34,8 +37,8 @@ export const projects: Project[] = [
     },
     {
         title: "VC-Connects",
-        description: "This is a description of project ",
-        image: overnight,
+        description: "VC-Connects is a full stack video confrencing site made to help users connect and chat with others!",
+        image: VC_Connects,
         link: "https://github.com/Reed-Broadhead/VC-Connect",
         techStack: [JS, React, Tailwind, Node, Express ],
     },
@@ -50,7 +53,7 @@ export const projects: Project[] = [
     {
         title: "Cove",
         description: "Cove is a messsaging site made to help users connect and chat with friends and family!",
-        image: overnight,
+        image: cove,
         link: "https://github.com/Reed-Broadhead/Cove",
         techStack: [JS, Python, React, Tailwind, Flask],   
      },
