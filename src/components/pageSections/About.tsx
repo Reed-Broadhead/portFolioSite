@@ -28,9 +28,9 @@ let socials: {name: string, link: string, image: string, color: string}[] = [
         color: "Black"
     }
 ]
-export default function About() {
+export default function About() {About
 
-    const openInNewTab = (url: string) => { 
+    const openInNewTab = (url: string) : void => { 
         const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
         if (newWindow) newWindow.opener = null
     }

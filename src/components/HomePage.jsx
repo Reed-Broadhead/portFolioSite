@@ -34,7 +34,11 @@ function HomePage() {
                     <NavBar about={about} projectRef={projects} contactRef={contact} />
 
 
-                <div className="flex flex-col  items-center justify-center text-4xl h-2/4 font-body ">Software Developer</div>
+                <motion.div 
+			initial={{ opacity: 0 }}
+	    		animate={{ opacity: 1 }}
+	    		transition={{ duration: 1.5, delay: 0.5}}
+	    		className="flex flex-col  items-center justify-center text-4xl h-2/4 font-body ">Software Developer</motion.div>
                 
             </div>
 

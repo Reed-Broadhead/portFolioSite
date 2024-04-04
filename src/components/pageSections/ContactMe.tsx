@@ -7,7 +7,7 @@ import emailjs from '@emailjs/browser';
 export default function ContactMe({contactRef}) {
 	const form = useRef();
 	
-	const sendEmail = (e) => {
+	const sendEmail = (e: EventTarget): void => {
 		e.preventDefault();
 		    emailjs
 		      .sendForm('service_sychnsz', 'template_8mubqb6', form.current, {
@@ -24,7 +24,7 @@ export default function ContactMe({contactRef}) {
 		form.current.reset();
 	}
 
-	const container = (x: any )  =>{
+	const container = (x: JSX ): JSX  => {
 
 	return (
 	<div className="w-full h-fit rounded-md bg-white/40 max-w-[400px] "  >
